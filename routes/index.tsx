@@ -10,7 +10,7 @@ export default defineRoute(async (req, ctx) => {
   const rootFiles = [];
   let i = 0;
   for await (const file of root) {
-    rootFiles.push(file.name);
+    rootFiles.push(file.path);
     i++;
     if (i > 100) break;
   }
